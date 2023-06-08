@@ -228,8 +228,8 @@
 
     <!-- Hi, I'm Sigrid Jin -->
     <g transform="translate(10, 0)" class="msg-1 bubble">
-        <rect width="159" height="42" rx="18.0355" />
-        <text x="15" y="27">Hi, I'm Sami</text>
+        <rect width="220" height="42" rx="18.0355" />
+        <text x="15" y="27">안녕하세요, 'Sami' 입니다.</text>
     </g>
 
     <!-- typing 2 -->
@@ -252,9 +252,9 @@
 
     <!-- From Columbus... -->
     <g transform="translate(10, 48)" class="msg-2">
-        <rect width="395" height="66.1302" rx="18.0355" class="bubble" />
-        <text x="15" y="26">I am in Seoul.</text>
-        <text x="15" y="51">The air condition in Seoul is NORMAL today.</text>
+        <rect width="245" height="66.1302" rx="18.0355" class="bubble" />
+        <text x="15" y="26">오늘 서울의 공기 상태는 보통!!</text>
+        <text x="15" y="51">그래서 집에 가고 싶어요..</text>
     </g>
 
     <!-- typing 3 -->
@@ -330,6 +330,6 @@
     <!-- Thanks -->
     <g transform="translate(10, 240)" class="msg-5">
         <rect width="240" height="42" rx="18.0355" class="bubble" />
-        <text x="15" y="27">Have a great 목! <tspan class="emoji">👋</tspan></text>
+        <text x="15" y="27">Have a great 목요일! <tspan class="emoji">👋</tspan></text>
     </g>
 </svg>
