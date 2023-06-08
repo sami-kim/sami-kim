@@ -277,9 +277,9 @@
 
     <!-- Work ... -->
     <g transform="translate(10, 120)" class="msg-3">
-        <rect width="430" height="66.1302" rx="18.0355" class="bubble" />
-        <text x="15" y="26">I’m eager to challenge Lich King</text>
-        <text x="15" y="51">Now extensively learning Fire and Arcane Magic.</text>
+        <rect width="310" height="66.1302" rx="18.0355" class="bubble" />
+        <text x="15" y="26">백엔드(java) 개발자입니다.</text>
+        <text x="15" y="51">안타깝게도 시간 마법은 봉인 당했습니다.</text>
     </g>
 
     <!-- typing 4 -->
@@ -302,10 +302,9 @@
 
     <!-- instagram -->
     <g transform="translate(10, 192)" class="msg-4">
-        <rect width="470" height="42" rx="18.0355" class="bubble" />
+        <rect width="383" height="42" rx="18.0355" class="bubble" />
         <text x="15" y="27">
-            Find me on
-            <a xlink:href="https://www.instagram.com/kimblue1016">https://www.instagram.com/kimblue1016</a>
+            저는 제~일 안쪽 복도 자리에서 만나실 수 있습니다. 
         </text>
     </g>
 
@@ -329,7 +328,7 @@
 
     <!-- Thanks -->
     <g transform="translate(10, 240)" class="msg-5">
-        <rect width="240" height="42" rx="18.0355" class="bubble" />
-        <text x="15" y="27">Have a great 목요일! <tspan class="emoji">👋</tspan></text>
+        <rect width="350" height="42" rx="18.0355" class="bubble" />
+        <text x="15" y="27">좋은 하루 되세요. 그런데 오늘은 목요일! <tspan class="emoji">👋</tspan></text>
     </g>
 </svg>
