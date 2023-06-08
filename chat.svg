@@ -229,7 +229,7 @@
     <!-- Hi, I'm Sigrid Jin -->
     <g transform="translate(10, 0)" class="msg-1 bubble">
         <rect width="159" height="42" rx="18.0355" />
-        <text x="15" y="27">Hi, I'm Entwickler.</text>
+        <text x="15" y="27">Hi, I'm Sami</text>
     </g>
 
     <!-- typing 2 -->
@@ -330,6 +330,6 @@
     <!-- Thanks -->
     <g transform="translate(10, 240)" class="msg-5">
         <rect width="240" height="42" rx="18.0355" class="bubble" />
-        <text x="15" y="27">Have a great Wednesday! <tspan class="emoji">👋</tspan></text>
+        <text x="15" y="27">Have a great 목! <tspan class="emoji">👋</tspan></text>
     </g>
 </svg>

@@ -1,13 +1,21 @@
 let fs = require('fs')
 let https = require('https');
 
-const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const today = new Date();
+const daysOfWeek = ['일', '월', '화', '수', '목', '금', '토'];
+
+const now = new Date();
+const utcNow = now.getTime() + (now.getTimezoneOffset() * 60 * 1000);
+const koreaTimeDiff = 9 * 60 * 60 * 1000;
+const today = new Date(utcNow + koreaTimeDiff);
+
 const dayOfWeek = daysOfWeek[today.getDay()];
 
 const AIR_API_KEY = process.env.AIR_API_KEY;
 
-https.get('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?returnType=json&numOfRows=100&pageNo=1&sidoName=%EC%84%9C%EC%9A%B8&ver=1.0&serviceKey=' + AIR_API_KEY, (response) => {
+https.get('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?returnType=json&numOfRows=100&pageNo=1&sidoName=%EC%84%9C%EC%9A%B8&ver=1.0&serviceKey='
+    
+    + AIR_API_KEY
+ , (response) => {
     let data = '';
 
     response.on('data', (chunk) => {
@@ -15,6 +23,7 @@ https.get('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMes
     });
 
     response.on('end', () => {
+
         const parsedData = JSON.parse(data);
         const filteredData = parsedData.response.body.items.filter(item => item.stationName === '금천구');
 
@@ -23,19 +32,19 @@ https.get('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMes
         let grade = '';
         switch (filteredData[0].khaiGrade) {
             case '1':
-                grade = 'GOOD'
+                grade = '좋음'
                 break;
             case '2':
-                grade = 'NORMAL'
+                grade = '보통'
                 break;
             case '3':
-                    grade = 'BAD'
+                grade = '나쁨'
                 break;
             case '4':
-                grade = 'DANGER'
+                grade = '위험'
                 break;
             default:
-                grade = 'NORMAL'
+                grade = '보통'
         }
 
         fs.readFile('template.svg', 'utf-8', (error, data) => {
@@ -47,7 +56,7 @@ https.get('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMes
             data = data.replace('{name}', 'Sami')
             data = data.replace('{grade}', grade)
 
-            data = data.replace('{today}', dayOfWeek);
+            data = data.replace('{today}', dayOfWeek + '요일');
 
             data = fs.writeFile('chat.svg', data, (err) => {
                 if (err) {
