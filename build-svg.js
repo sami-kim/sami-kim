@@ -13,8 +13,7 @@ const dayOfWeek = daysOfWeek[today.getDay()];
 const AIR_API_KEY = process.env.AIR_API_KEY;
 
 https.get('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?returnType=json&numOfRows=100&pageNo=1&sidoName=%EC%84%9C%EC%9A%B8&ver=1.0&serviceKey='
-  + 'qTq4ea2UK%2Bqfy4cZgDchTWor872C5crxBlh3SfFce0GcUKodgQwQEHg%2FS3yv1ICA5GbmEb%2BQ4eOMH%2F%2F24fn5kg%3D%3D' 
-//+ AIR_API_KEY
+        + AIR_API_KEY
  , (response) => {
     let data = '';
 
