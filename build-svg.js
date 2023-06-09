@@ -13,7 +13,8 @@ const dayOfWeek = daysOfWeek[today.getDay()];
 const AIR_API_KEY = process.env.AIR_API_KEY;
 
 https.get('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?returnType=json&numOfRows=100&pageNo=1&sidoName=%EC%84%9C%EC%9A%B8&ver=1.0&serviceKey='
-    + AIR_API_KEY
+  + 'qTq4ea2UK%2Bqfy4cZgDchTWor872C5crxBlh3SfFce0GcUKodgQwQEHg%2FS3yv1ICA5GbmEb%2BQ4eOMH%2F%2F24fn5kg%3D%3D' 
+//+ AIR_API_KEY
  , (response) => {
     let data = '';
 
@@ -25,8 +26,6 @@ https.get('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMes
 
         const parsedData = JSON.parse(data);
         const filteredData = parsedData.response.body.items.filter(item => item.stationName === '금천구');
-
-        console.log('data : ' + JSON.stringify(filteredData));
 
         let grade = '';
         switch (filteredData[0].khaiGrade) {
@@ -52,19 +51,22 @@ https.get('https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMes
                 return
             }
 
-            console.log(grade);
-
-            data = data.replace('{name}', 'Sami')
-            data = data.replace('{grade}', grade)
-
-            data = data.replace('{today}', dayOfWeek + '요일');
+            data = data
+                        .replace('{name}', 'Sami')
+                        .replace('{grade}', grade)
+                        .replace('{today}', dayOfWeek + '요일');
 
             data = fs.writeFile('chat.svg', data, (err) => {
                 if (err) {
+                    console.log('failure');
                     console.error(err)
                     return
                 }
             })
+
+            console.log('success');
+            console.log('data : ' + JSON.stringify(filteredData));
+
         })
 
     });
