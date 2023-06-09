@@ -25,9 +25,9 @@ jobs:
             - name: Commit changes
               uses: EndBug/add-and-commit@v4
               with:
-                  author_name: kimblue1016
-                  author_email: kimblue1016@gmail.com
+                  author_name: sami
+                  author_email: ksm5@torder.com
                   message: "Auto updating my readme"
-                  add: "*.svg"
+                  add: "chat.svg"
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
