@@ -253,7 +253,7 @@
     <!-- From Columbus... -->
     <g transform="translate(10, 48)" class="msg-2">
         <rect width="245" height="66.1302" rx="18.0355" class="bubble" />
-        <text x="15" y="26">오늘 서울의 공기 상태는 위험!!</text>
+        <text x="15" y="26">오늘 서울의 공기 상태는 나쁨!!</text>
         <text x="15" y="51">그래서 집에 가고 싶어요..</text>
     </g>
 
