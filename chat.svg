@@ -253,7 +253,7 @@
     <!-- From Columbus... -->
     <g transform="translate(10, 48)" class="msg-2">
         <rect width="245" height="66.1302" rx="18.0355" class="bubble" />
-        <text x="15" y="26">오늘 서울의 공기 상태는 좋음!!</text>
+        <text x="15" y="26">오늘 서울의 공기 상태는 보통!!</text>
         <text x="15" y="51">그래서 집에 가고 싶어요..</text>
     </g>
 
@@ -329,6 +329,6 @@
     <!-- Thanks -->
     <g transform="translate(10, 240)" class="msg-5">
         <rect width="340" height="42" rx="18.0355" class="bubble" />
-        <text x="15" y="27">좋은 하루 되세요. 그런데 오늘은 화요일!! <tspan class="emoji">👋</tspan></text>
+        <text x="15" y="27">좋은 하루 되세요. 그런데 오늘은 수요일!! <tspan class="emoji">👋</tspan></text>
     </g>
 </svg>
