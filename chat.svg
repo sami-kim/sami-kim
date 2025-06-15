@@ -329,6 +329,6 @@
     <!-- Thanks -->
     <g transform="translate(10, 240)" class="msg-5">
         <rect width="340" height="42" rx="18.0355" class="bubble" />
-        <text x="15" y="27">좋은 하루 되세요. 그런데 오늘은 일요일!! <tspan class="emoji">👋</tspan></text>
+        <text x="15" y="27">좋은 하루 되세요. 그런데 오늘은 월요일!! <tspan class="emoji">👋</tspan></text>
     </g>
 </svg>
